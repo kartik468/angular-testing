@@ -1,3 +1,24 @@
+<nav>
+  <a (click)="navigateTo('template-driven-form')">Template driven Form</a> |
+  <a (click)="navigateTo('reactive-form')">Reactive Form</a>
+</nav>
+
+<router-outlet></router-outlet>
+
+<hr>
+
 <div class="content" role="main">
   <span>{{ title }} app is running!</span>
+</div>
+<br />
+<button type="button" class="btn1" (click)="updateTitle()">Button 1</button>
+<br />
+<br />
+<button type="button" class="btn2" (click)="asyncTest()">Button 2</button>
+
+<br />
+<br />
+<h3>Messages</h3>
+<div *ngFor="let msg of messageService.messages">
+  {{ msg }}
 </div>
